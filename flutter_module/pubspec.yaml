@@ -1,0 +1,22 @@
+name: flutter_module
+description: A new flutter module project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_app:
+    path: ../../flutter_app
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  module:
+    androidX: true
+    androidPackage: com.example.flutter_module
+    iosBundleIdentifier: com.example.flutterModule
