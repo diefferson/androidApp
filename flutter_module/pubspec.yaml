@@ -9,14 +9,15 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_app:
-    path: ../../flutterApp #to develop
-    #git: https://github.com/diefferson/flutterApp.git  #to releases
+#     path: ../../flutterApp #to develop
+    git: https://github.com/diefferson/flutterApp.git  #to releases
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
+  uses-material-design: true
   module:
     androidX: true
     androidPackage: com.example.flutter_module

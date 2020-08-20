@@ -2,7 +2,8 @@ package diefferson.androidapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import diefferson.androidapp.ui.LoginActivity
+import diefferson.androidapp.ui.FlutterBottomSheetActivity
+import diefferson.androidapp.ui.FlutterFullScreenActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,8 +14,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupListeners(){
-        openFlutter.setOnClickListener {
-            LoginActivity.launch(this)
+        openFullScreen.setOnClickListener {
+            FlutterFullScreenActivity.launch(this)
+        }
+
+        openBottomSheet.setOnClickListener {
+            FlutterBottomSheetActivity.launch(this)
         }
     }
 }
