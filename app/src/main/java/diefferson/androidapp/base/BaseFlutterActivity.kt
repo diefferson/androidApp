@@ -1,7 +1,10 @@
 package diefferson.androidapp.base
 
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.transition.TransitionInflater
+import android.view.WindowManager
 import android.view.animation.AccelerateDecelerateInterpolator
 import diefferson.androidapp.BuildConfig
 import diefferson.androidapp.R
@@ -24,6 +27,10 @@ abstract class BaseFlutterActivity : FlutterActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.statusBarColor = Color.parseColor("#00FFFFFF");
+        }
         flutterEngine?.navigationChannel?.pushRoute(customInitialRoute)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
