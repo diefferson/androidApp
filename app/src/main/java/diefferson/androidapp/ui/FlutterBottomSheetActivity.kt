@@ -9,9 +9,7 @@ class FlutterBottomSheetActivity : BaseFlutterActivity(){
 
     override val customInitialRoute = "/bottomSheet"
 
-    override fun setupChannels(flutterEngine: FlutterEngine) {
-
-    }
+    override fun setupChannels(flutterEngine: FlutterEngine) {}
 
     companion object{
         fun launch(context: Context?){

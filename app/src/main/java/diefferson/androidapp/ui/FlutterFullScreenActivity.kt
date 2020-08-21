@@ -9,9 +9,7 @@ class FlutterFullScreenActivity : BaseFlutterActivity(){
 
     override val customInitialRoute = "/fullScreen"
 
-    override fun setupChannels(flutterEngine: FlutterEngine) {
-
-    }
+    override fun setupChannels(flutterEngine: FlutterEngine) {}
 
     companion object{
         fun launch(context: Context?){
